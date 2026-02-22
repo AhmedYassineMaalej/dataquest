@@ -60,6 +60,9 @@ def load_model():
 
 
 def predict(df, model):
+    # Force the model to use only 1 thread to match the container constraint
+    model.set_params(n_jobs=1)
+
     features = df.drop(columns=["User_ID"])
     predictions = model.predict(features)
 
