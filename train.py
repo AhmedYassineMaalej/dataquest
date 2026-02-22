@@ -35,7 +35,7 @@ def engineer_features(df):
 
 def train_model():
     print("Loading training data...")
-    df = pd.read_csv("train_split.csv")
+    df = pd.read_csv("modified.csv")
 
     print("Applying Feature Engineering...")
     # Apply our engineered features
