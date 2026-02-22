@@ -36,6 +36,7 @@ def run_test():
         print("Testing predict()...")
         start_time = time.time()
         predictions_df = solution.predict(processed_df, model)
+        print(predictions_df)
         latency = time.time() - start_time
 
         # 6. Validate Output Format Requirements
